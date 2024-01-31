@@ -1,6 +1,6 @@
 // import Team from "../../MicrosoftTeams-image.png";
 import HomeTotals from '../HomeTotals';
-import videp from "../../videp.mp4";
+import video from "../../video.mp4";
 
 
 function Home() {
@@ -29,7 +29,7 @@ function Home() {
                 <div>
                 <h1>Meet the Team!</h1>
                 <video width="70%" height ="40%" controls>
-                    <source src = {videp} type='video/mp4'  />
+                    <source src = {video} type='video/mp4'  />
                     </video>
                 <br />
                 </div>
