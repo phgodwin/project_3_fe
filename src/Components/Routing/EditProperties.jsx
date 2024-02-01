@@ -1,8 +1,8 @@
-// EditProperty.jsx
+
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import { useNavigate, useParams } from "react-router-dom";
-
+// Edit properties axios - get and patch
 function EditProperties() {
 
     const navigate = useNavigate();
@@ -20,7 +20,7 @@ function EditProperties() {
     // function propertyInfo() {
 
     useEffect(() => {
-    axios.get("http://localhost:3030/properties/" + params.id)
+    axios.get("http://localhost:8081/properties/get" + params.id)
     .then((res) => {
         console.log(res);
         setPrice(res.data.prc);
@@ -37,7 +37,7 @@ function EditProperties() {
         e.preventDefault();
     
 
-    axios.patch("http://localhost:3030/properties/" + params.id, { prc: price , loc: location, pcod: postcode, beds: bedrooms, bath: bathrooms, grdn: garden, status: propertyStatus})
+    axios.patch("http://localhost:8081/properties/update" + params.id, { prc: price , loc: location, pcod: postcode, beds: bedrooms, bath: bathrooms, grdn: garden, status: propertyStatus})
         .then(() => {
             navigate("/properties")
 

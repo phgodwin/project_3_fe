@@ -5,7 +5,7 @@ import gardenPicture from "../images/garden-svgrepo-com.svg"
 import { useNavigate } from 'react-router-dom';
 import sellerPicture from "../images/person-svgrepo-com.svg";
 
-
+// us navigate?
 function Property(props) {
 
     const handleEdit = () =>{

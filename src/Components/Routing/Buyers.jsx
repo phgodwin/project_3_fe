@@ -1,8 +1,9 @@
 import axios from "axios";
 // installed axios (npm install axios) and then imported
 import { useEffect, useState } from "react";
-import Buyer from "../Buyer";
-
+import Buyer from "../Buyer"; 
+// CHILD USING PROPS
+// axios get and axios post for buyer
 
 function Buyers() {
 
@@ -17,7 +18,7 @@ function Buyers() {
 
     function getBuyers() {
         axios
-            .get("http://localhost:3030/buyers")
+            .get("http://localhost:8081/buyers/get")
             .then((response) => {
                 setBuyers(response.data)
             })
@@ -52,7 +53,7 @@ function Buyers() {
 
 
 
-        axios.post("http://localhost:3030/buyers", { firstName, lastName, postCode, phoneNum, emailAdd })
+        axios.post("http://localhost:8081/buyers/create", { firstName, lastName, postCode, phoneNum, emailAdd })
 
 
             .then(response => {

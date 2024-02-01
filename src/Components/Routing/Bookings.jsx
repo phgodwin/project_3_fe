@@ -1,19 +1,13 @@
 // Bookings.jsx
 
-
+// Axios -Bookings - get and post
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
-import { useNavigate, useParams } from "react-router-dom";
 import BuyerDropDown from '../BuyerDropDown';
-import Buyer from "../Buyer";
 import Booking from '../Booking';
 
 function Bookings() {
 
-    const navigate = useNavigate();
-    const params = useParams();
-
-    const [buyers, setBuyers] = useState ([]);
     const [bookings, setBookings] = useState ([]);
     const [date, setDate] = useState ("");
     const [time, setTime] = useState ("");
@@ -23,7 +17,7 @@ function Bookings() {
 
     function getBookings() {
         axios
-            .get("http://localhost:3030/bookings" )
+            .get("http://localhost:8081/bookings/get" )
             .then((response) => {
                 setBookings(response.data)
             })
@@ -56,7 +50,7 @@ function Bookings() {
             }
         }
 
-        axios.post("http://localhost:3030/bookings", { date, time, buyername  })
+        axios.post("http://localhost:8081/bookings/create", { date, time, buyername  })
         .then(response => {
             setDate("");
             setTime("");   
@@ -73,6 +67,7 @@ function Bookings() {
             <input onChange={(e) => setDate (e.target.value)} value={date} type="date" name="bookings" id="bookings" className="form-control"/>
             <br />
             <select onChange={(e) => setTime (e.target.value)} value={time} name="timeslot" id="timeslot" className="form-select">
+            <option value="">Select Time</option>
                 <option value="8:00 - 9:00">8:00 - 9:00</option>
                 <option value="9:00 - 10:00">9:00 - 10:00</option>
                 <option value="10:00 - 11:00">10:00 - 11:00</option>

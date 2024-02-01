@@ -1,5 +1,5 @@
 import PropTypes from 'prop-types';
-
+// BUYER PROPS
 function Buyer(props) {
    
     return (

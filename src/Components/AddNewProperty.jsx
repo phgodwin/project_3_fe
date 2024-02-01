@@ -4,7 +4,7 @@ import { useEffect, useState } from 'react';
 import FilterProperties from './FilterProperties';
 import SellerDropDown from './SellerDropDown';
 
-
+// axios get and axios post for properties
 function AddNewProperty() {
 
   const [properties, setProperties] = useState([])
@@ -35,7 +35,7 @@ function AddNewProperty() {
     }
 
 
-    axios.post("http://localhost:3030/properties", newProperty)
+    axios.post("http://localhost:8081/properties/create", newProperty)
       .then(response => {
 
 
@@ -54,7 +54,7 @@ function AddNewProperty() {
 
 
   function getProperties() {
-    axios.get("http://localhost:3030/properties")
+    axios.get("http://localhost:8081/properties/get")
       .then((response) => { setProperties(response.data) })
 
   }

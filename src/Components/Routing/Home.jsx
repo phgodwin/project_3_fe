@@ -1,5 +1,8 @@
-import Team from "../../MicrosoftTeams-image.png";
+// import Team from "../../MicrosoftTeams-image.png";
 import HomeTotals from '../HomeTotals';
+import video from "../../video.mp4";
+// Do we want to update the team bios?
+
 
 
 function Home() {
@@ -25,10 +28,13 @@ function Home() {
 
                 <br/>
                 <br/>
+                <div>
                 <h1>Meet the Team!</h1>
-                <a><img className='img-fluid' src={Team} alt='Team Photo' width="50%" /></a>
+                <video width="70%" height ="40%" controls>
+                    <source src = {video} type='video/mp4'  />
+                    </video>
                 <br />
-
+                </div>
                 <p>Left to right: Liliano Balde, Paige Godwin, Nathan Liddle, Richard Miles, Andrew King </p>
 
             </article>

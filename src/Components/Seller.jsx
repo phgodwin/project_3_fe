@@ -1,5 +1,5 @@
 import PropTypes from 'prop-types';
-
+// seller's details as props - these can be passed to child components
 function Seller(props) {
 
     return (
