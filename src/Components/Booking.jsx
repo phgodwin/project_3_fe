@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types';
 import axios from 'axios'
-
+// booking axios delete
 function Booking(props) {
 
 

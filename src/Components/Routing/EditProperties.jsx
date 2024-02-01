@@ -1,8 +1,8 @@
-// EditProperty.jsx
+
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import { useNavigate, useParams } from "react-router-dom";
-
+// Edit properties axios - get and patch
 function EditProperties() {
 
     const navigate = useNavigate();

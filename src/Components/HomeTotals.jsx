@@ -1,6 +1,8 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
 
+// home page totals -  4 axios requests on this page
+// array.length?
 function HomeTotals() {
 
     const [buyers, setBuyers] = useState([])
@@ -46,7 +48,7 @@ function HomeTotals() {
             .catch(error => console.error(error))
     }
     useEffect(getBookings, [])
-
+// does this .length relate to the json arrays? how will this translate to Spring/ db??
     return (
         <div className="container text-center" >
             <div className="row">

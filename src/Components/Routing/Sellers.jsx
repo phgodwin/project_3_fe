@@ -1,5 +1,7 @@
 import axios from "axios";
 // installed axios (npm install axios) and then imported
+
+//creating sellers - AXIOS GET AND AXIOS POST
 import { useEffect, useState } from "react";
 import Seller from "../Seller";
 

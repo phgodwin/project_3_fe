@@ -4,7 +4,7 @@ import { useEffect, useState } from 'react';
 import FilterProperties from './FilterProperties';
 import SellerDropDown from './SellerDropDown';
 
-
+// axios get and axios post for properties
 function AddNewProperty() {
 
   const [properties, setProperties] = useState([])

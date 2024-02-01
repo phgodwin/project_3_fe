@@ -1,6 +1,6 @@
 import AddNewProperty from "../AddNewProperty";
 
-
+// no axios
 function Properties() {
     return ( 
     <div style={{marginTop: "50px", textAlign: "center"}}>

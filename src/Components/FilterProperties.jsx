@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import Property from "./Property";
 import axios from "axios";
-
+// no axios on this page - are we moving filtering logic to Spring?
 function FilterProperties(props) {
   const [locationFilter, setLocationFilter] = useState("");
   const [priceFilter, setPriceFilter] = useState("");
@@ -10,7 +10,7 @@ function FilterProperties(props) {
   const [gardenFilter, setGardenFilter] = useState("");
   const [propertyStatus, setPropertyStatusFilter] = useState("");
 
-  // to commit
+  
 
   const propertyComponents = [];
 

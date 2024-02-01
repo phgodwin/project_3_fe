@@ -1,6 +1,8 @@
 // import Team from "../../MicrosoftTeams-image.png";
 import HomeTotals from '../HomeTotals';
 import video from "../../video.mp4";
+// Do we want to update the team bios?
+
 
 
 function Home() {

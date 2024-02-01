@@ -1,7 +1,7 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
 
-
+// axios get - DISPLAYlist of sellers - where- properties page- select seller of property- used in AddNewProperty
 function SellerDropDown(props) {
 
     const [sellers, setSellers] = useState([])

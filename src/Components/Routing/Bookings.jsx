@@ -1,6 +1,6 @@
 // Bookings.jsx
 
-
+// Axios -Bookings - get and post
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import { useNavigate, useParams } from "react-router-dom";

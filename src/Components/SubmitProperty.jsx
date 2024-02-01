@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import axios from "axios";
-
+// Adding a property -- PROPERTY axios get AND  axios post
 const AddProperty = () => {
 
     const [price, setPrice] = useState("");

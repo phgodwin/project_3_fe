@@ -1,8 +1,9 @@
 import axios from "axios";
 // installed axios (npm install axios) and then imported
 import { useEffect, useState } from "react";
-import Buyer from "../Buyer";
-
+import Buyer from "../Buyer"; 
+// CHILD USING PROPS
+// axios get and axios post for buyer
 
 function Buyers() {
 

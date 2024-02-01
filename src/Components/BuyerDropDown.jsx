@@ -1,7 +1,7 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
 
-
+// buyer dropdown list in bookings page - 
 function BuyerDropDown(props) {
 
     const [buyers, setBuyers] = useState([])
