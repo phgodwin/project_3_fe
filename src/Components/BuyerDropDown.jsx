@@ -8,7 +8,7 @@ function BuyerDropDown(props) {
     const buyerNameComponent = []
     function getBuyers() {
         axios
-            .get("http://localhost:3030/buyers")
+            .get("http://localhost:8081/buyers/get")
             .then((response) => {
                 setBuyers(response.data)
             })

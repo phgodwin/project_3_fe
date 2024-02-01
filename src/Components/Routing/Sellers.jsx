@@ -20,7 +20,7 @@ function Sellers() {
 
     function getSellers() {
         axios
-            .get("http://localhost:3030/sellers")
+            .get("http://localhost:8081/sellers/get")
             .then((response) => {
                 setSellers(response.data)
             })
@@ -52,7 +52,7 @@ function Sellers() {
             }
         }
 
-        axios.post("http://localhost:3030/sellers", { firstName, lastName, postCode, phoneNum, emailAdd })
+        axios.post("http://localhost:8081/sellers/create", { firstName, lastName, postCode, phoneNum, emailAdd })
 
 
             .then(response => {
