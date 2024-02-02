@@ -36,6 +36,8 @@ function Sellers() {
                 postCode={seller.postCode}
                 phoneNum={seller.phoneNum}
                 emailAdd={seller.emailAdd}
+                id={seller.id}
+                getSellers={getSellers}
             />)
     }
 

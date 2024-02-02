@@ -34,6 +34,8 @@ function Buyers() {
                 postCode={buyer.postCode}
                 phoneNum={buyer.phoneNum}
                 emailAdd={buyer.emailAdd}
+                id={buyer.id}
+                getBuyers={getBuyers}
             />)
     }
 

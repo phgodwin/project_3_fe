@@ -7,7 +7,7 @@ function Booking(props) {
     return (
         
         <tr>
-            <td>{props.buyername}</td>
+            <td>{props.buyerName}</td>
             <td>{props.date}</td>
             <td>{props.time}</td>
             <td><button style={{ color: "white", fontWeight: "bold", backgroundColor: "#984da2" }} type="button" onClick={() => {
