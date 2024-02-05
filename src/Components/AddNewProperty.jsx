@@ -1,4 +1,3 @@
-import Property from './Property';
 import axios from 'axios'
 import { useEffect, useState } from 'react';
 import FilterProperties from './FilterProperties';
@@ -14,24 +13,21 @@ function AddNewProperty() {
   const [bedrooms, setBedrooms] = useState("");
   const [bathrooms, setBathrooms] = useState("")
   const [garden, setGarden] = useState("");
-  const [propertyStatus, SetPropertyStatus] = useState("For Sale");
-  const [sellerName, setSellerName] = useState("");
-
-
-
+  const [propertyStatus, setPropertyStatus] = useState("For Sale");
+  const [sellerId, setSellerId] = useState("");
 
   function handleSubmit(event) {
     event.preventDefault();
 
     const newProperty = {
-      sellnme: sellerName,
       prc: price,
       loc: location,
       pcod: postCode,
       beds: bedrooms,
       bath: bathrooms,
       grdn: garden,
-      status: propertyStatus
+      status: propertyStatus,
+      seller: {id: sellerId}
     }
 
 
@@ -45,9 +41,9 @@ function AddNewProperty() {
         setBedrooms("");
         setBathrooms("");
         setGarden("");
-        SetPropertyStatus("For Sale");
-        setSellerName("");
+        setPropertyStatus("For Sale");
         getProperties();
+        setSellerId("")
       })
       .catch(error => console.error(error))
   }
@@ -59,27 +55,6 @@ function AddNewProperty() {
 
   }
   useEffect(getProperties, [])
-
-
-
-  const newComponents = []
-  for (let created of properties) {
-    newComponents.push(
-      <Property
-        key={created.prc + "" + created.loc}
-        prc={created.prc}
-        pcod={created.pcod}
-        loc={created.loc}
-        beds={created.beds}
-        bath={created.bath}
-        grdn={created.grdn}
-        propertyStatus={created.status}
-        sellnme={created.sellnme}
-
-      />
-    )
-  };
-
 
   return (
 
@@ -96,7 +71,7 @@ function AddNewProperty() {
 
             <div class="col-auto">
               <label>Seller</label>
-              <SellerDropDown required value={sellerName} onChange={(e) => setSellerName(e.target.value)} />
+              <SellerDropDown required value={sellerId} onChange={(e) => setSellerId(e.target.value)} />
 
               <label for="autoSizingInput">Price</label>
               <input className="form-control" value={price} onChange={event => setPrice(event.target.value)} placeholder="Price" type="text" required></input>

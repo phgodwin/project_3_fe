@@ -20,7 +20,7 @@ function SellerDropDown(props) {
     for (let seller of sellers) {
 
         sellerNameComponent.push(
-            <option value={seller.firstName + " " + seller.lastName}>{seller.firstName + " " + seller.lastName}</option>)
+            <option value={seller.id}>{seller.firstName + " " + seller.lastName}</option>)
 
     }
     return(

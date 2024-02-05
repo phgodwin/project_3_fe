@@ -42,7 +42,7 @@ function FilterProperties(props) {
         grdn={property.grdn}
         id={property.id}
         status={property.status}
-        sellnme={property.sellnme}
+        sellerName={property.sellerName}
       />
     );
   }
