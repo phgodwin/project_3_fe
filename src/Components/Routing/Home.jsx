@@ -71,7 +71,11 @@ function Home() {
                 </div>
                 <div style={{ backgroundColor: "#984da2", borderRadius: "5px", padding: "5px", margin: "10px" }}>
                     <h5 >Anna Wilson</h5>
+                    <p>"A house is a home filled with joy and beauty, making your dreams come true is my professional duty.</p>
+                <p>Put your trust, if you will, in my artistic finesse - the outcome, you'll find, is sure to impress."</p>
+                
                 </div>
+        
                 <div style={{ backgroundColor: "#984da2", borderRadius: "5px", padding: "5px", margin: "10px" }}>
                     <del><h5>Richard Miles</h5>
                         <p>"Bringing a touch of flair to the world of real estate at Control Alt Elite! As an

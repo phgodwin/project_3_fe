@@ -23,7 +23,7 @@ function Booking(props) {
 Booking.propTypes = {
     time: PropTypes.string,
     date: PropTypes.string,
-    buyername: PropTypes.string,
+    buyerName: PropTypes.string,
     id: PropTypes.number,
 }
 
