@@ -1,9 +1,5 @@
-// import Team from "../../MicrosoftTeams-image.png";
 import HomeTotals from '../HomeTotals';
 import video from "../../video.mp4";
-// Do we want to update the team bios?
-
-
 
 function Home() {
     return (
@@ -53,7 +49,7 @@ function Home() {
                 <div style={{ backgroundColor: "#003b00", borderRadius: "5px", padding: "5px", margin: "10px" }}>
                     <h5 >Agustina Di Paola</h5>
                     <p>"I bring pure South American excellence. If you want a property secured like Messi secures the
-                            Wolrd Cup, then you can trust me to make your dreams come true."</p>
+                        World Cup, then you can trust me to make your fantasies come true. VAMOS!!!"</p>
                 </div>
                 <div style={{ backgroundColor: "#003b00", borderRadius: "5px", padding: "5px", margin: "10px" }}>
                     <del><h5>Paige Godwin</h5>
@@ -74,10 +70,10 @@ function Home() {
                 <div style={{ backgroundColor: "#003b00", borderRadius: "5px", padding: "5px", margin: "10px" }}>
                     <h5 >Anna Wilson</h5>
                     <p>"A house is a home filled with joy and beauty, making your dreams come true is my professional duty.</p>
-                <p>Put your trust, if you will, in my artistic finesse - the outcome, you'll find, is sure to impress."</p>
-                
+                    <p>Put your trust, if you will, in my artistic finesse - the outcome, you'll find, is sure to impress."</p>
+
                 </div>
-        
+
                 <div style={{ backgroundColor: "#003b00", borderRadius: "5px", padding: "5px", margin: "10px" }}>
                     <del><h5>Richard Miles</h5>
                         <p>"Bringing a touch of flair to the world of real estate at Control Alt Elite! As an

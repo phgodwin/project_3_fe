@@ -95,8 +95,7 @@ function AddNewProperty() {
                 <option value="No">No</option>
               </select>
               <br />
-              <button style={{ margin: "auto", width: "50%", alignItems: "center", color: "white", fontWeight: "bold", backgroundColor: "#003b00" }} className="btn btn-primary " type="submit" >Submit</button>
-
+              <button className="form-control" type="submit" style={{ color: "white", fontWeight: "bold", backgroundColor: "#003b00" }}>Submit</button>
             </div>
 
           </form>
