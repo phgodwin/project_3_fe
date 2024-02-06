@@ -52,19 +52,19 @@ function HomeTotals() {
     return (
         <div className="container text-center" >
             <div className="row">
-                <div className="col" style={{ backgroundColor: "#984da2", borderRadius: "10px", margin: "5px" }}>
+                <div className="col" style={{ backgroundColor: "black", borderRadius: "10px", margin: "5px" }}>
                     <h3>Buyers</h3>
                     <h3>{buyers.length}</h3>
                 </div>
-                <div className="col" style={{ backgroundColor: "#984da2", borderRadius: "10px", margin: "5px" }}>
+                <div className="col" style={{ backgroundColor: "black", borderRadius: "10px", margin: "5px" }}>
                     <h3>Sellers</h3>
                     <h3>{sellers.length}</h3>
                 </div>
-                <div className="col" style={{ backgroundColor: "#984da2", borderRadius: "10px", margin: "5px" }}>
+                <div className="col" style={{ backgroundColor: "black", borderRadius: "10px", margin: "5px" }}>
                     <h3>Properties</h3>
                     <h3>{properties.length}</h3>
                 </div>
-                <div className="col" style={{ backgroundColor: "#984da2", borderRadius: "10px", margin: "5px" }}>
+                <div className="col" style={{ backgroundColor: "black", borderRadius: "10px", margin: "5px" }}>
                     <h3>Bookings</h3>
                     <h3>{bookings.length}</h3>
                 </div>

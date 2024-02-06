@@ -68,7 +68,7 @@ function Bookings() {
     } 
     return(
         <>
-<div style={{ backgroundColor: "purple", borderRadius: "15px", color: "white", paddingBottom: "20px", width: "50%", margin: "auto" }} ></div>
+<div style={{ backgroundColor: "#003b00", borderRadius: "15px", color: "white", paddingBottom: "20px", width: "50%", margin: "auto" }} ></div>
         <form onSubmit={handleSubmit} style={{marginTop: "50px", width: "20%", marginLeft: "20px"}} >
             <input onChange={(e) => setDate (e.target.value)} value={date} type="date" name="bookings" id="bookings" className="form-control"/>
             <br />
@@ -89,7 +89,7 @@ function Bookings() {
             <BuyerDropDown value={buyerName} onChange={(e) => setBuyerName (e.target.value)} className="form-control"/>
             <br />
             <br />
-            <button style={{ color: "white", fontWeight: "bold", backgroundColor: "#984da2" }} type='submit'>Submit</button>
+            <button style={{ color: "white", fontWeight: "bold", backgroundColor: "#003b00" }} type='submit'>Submit</button>
         </form >
         <div/>
         <br />

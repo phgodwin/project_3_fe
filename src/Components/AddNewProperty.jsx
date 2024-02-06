@@ -60,7 +60,7 @@ function AddNewProperty() {
 
     <div>
       <div style={{ textAlign: "center" }}>
-        <div style={{ backgroundColor: "purple", borderRadius: "15px", color: "white", paddingBottom: "20px", width: "50%", margin: "auto" }}>
+        <div style={{ backgroundColor: "#003b00", borderRadius: "15px", color: "white", paddingBottom: "20px", width: "50%", margin: "auto" }}>
           <h3 style={{ fontFamily: "monospace" }}>Add a Property</h3>
           <form onSubmit={handleSubmit} className="row gx-3 gy-2" style={{ justifyContent: "center" }}>
             <div style={{ marginTop: "35px" }} class="col-auto">
@@ -95,7 +95,7 @@ function AddNewProperty() {
                 <option value="No">No</option>
               </select>
               <br />
-              <button style={{ margin: "auto", width: "50%", alignItems: "center", color: "white", fontWeight: "bold", backgroundColor: "#984da2" }} className="btn btn-primary " type="submit" >Submit</button>
+              <button style={{ margin: "auto", width: "50%", alignItems: "center", color: "white", fontWeight: "bold", backgroundColor: "#003b00" }} className="btn btn-primary " type="submit" >Submit</button>
 
             </div>
 

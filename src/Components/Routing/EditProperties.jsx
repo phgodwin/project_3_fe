@@ -48,9 +48,9 @@ function EditProperties() {
 return(
 
     <>
-    <h1 style={{ color: "purple", fontFamily: "monospace", textTransform: "capitalize", fontSize: "65px", marginTop: "50px", textAlign: "center" }}>Edit Property</h1>
+    <h1 style={{ color: "#003b00", fontFamily: "monospace", textTransform: "capitalize", fontSize: "65px", marginTop: "50px", textAlign: "center" }}>Edit Property</h1>
 <form onSubmit={handleSubmit} className="row gx-3 gy-2" style={{ justifyContent: "center", marginTop: "20px"}}>
-<div className='row' style={{ backgroundColor: "purple", borderRadius: "15px", color: "white", padding: "30px", width: "50%", margin: "auto", justifyContent: "center" }}> 
+<div className='row' style={{ backgroundColor: "#003b00", borderRadius: "15px", color: "white", padding: "30px", width: "50%", margin: "auto", justifyContent: "center" }}> 
 <div class="col-auto">
     <label for="autoSizingInput">Price</label>
     <input className="form-control" onChange={event => setPrice(event.target.value)} type="text" id="price" value={price}/>
@@ -84,7 +84,7 @@ return(
         <option value="No">No</option>
     </select>
     <br />  
-    <button style={{ color: "white", fontWeight: "bold", backgroundColor: "#984da2", marginLeft:"30px",  width: "75%" }} className='form-control' type="" >Submit</button>
+    <button style={{ color: "white", fontWeight: "bold", backgroundColor: "#003b00", marginLeft:"30px",  width: "75%" }} className='form-control' type="" >Submit</button>
     <br />
     
 </div>

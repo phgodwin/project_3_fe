@@ -13,7 +13,7 @@ function Buyer(props) {
             <td>{props.postCode}</td>
             <td>{props.phoneNum}</td>
             <td>{props.emailAdd}</td>
-            <td><button style={{ color: "white", fontWeight: "bold", backgroundColor: "#984da2" }} type="button" onClick={() => {
+            <td><button style={{ color: "white", fontWeight: "bold", backgroundColor: "#003b00" }} type="button" onClick={() => {
                 axios.delete("http://localhost:8081/buyers/delete/" + props.id)
                 .then(res => {props.getBuyers()})
                 .catch(err => console.error(err));
@@ -21,7 +21,7 @@ function Buyer(props) {
              </td>
 
              {/* to be fix */}
-             <td><button style={{ color: "white", fontWeight: "bold", backgroundColor: "#984da2" }} type="button" onClick={() => {
+             <td><button style={{ color: "white", fontWeight: "bold", backgroundColor: "#003b00" }} type="button" onClick={() => {
                 axios.patch("http://localhost:8081/buyers/update/" + props.id)
                 .then(res => {props.getBuyers()})
                 .catch(err => console.error(err));

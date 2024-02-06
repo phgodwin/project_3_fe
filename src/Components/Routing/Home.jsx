@@ -7,10 +7,10 @@ import video from "../../video.mp4";
 
 function Home() {
     return (
-        <div style={{ margin: "15px", fontFamily: "monospace" }} >
+        <div style={{ margin: "15px", fontFamily: "monospace", color: "white" }} >
             <article style={{ textAlign: "center", marginTop: "50px" }}>
                 <br />
-                <div style={{ backgroundColor: "purple", borderRadius: "15px", color: "white" }}>
+                <div style={{ backgroundColor: "#003b00", borderRadius: "15px", color: "white" }}>
                     <h1 >Welcome To The Colleague Management Tool!</h1>
                     <br />
                     <HomeTotals />
@@ -36,54 +36,56 @@ function Home() {
                     <br />
                 </div>
                 <p style={{ textDecoration: "line-through", color: "red" }}>Left to right: Liliano Balde, Paige Godwin, Nathan Liddle, Richard Miles, Andrew King</p>
-                <h3 style={{ color: "green" }}>Left to right:  Craig Morris, Agustina Di Paola, Nathan Liddle, Anna Wilson </h3>
+                <h3 style={{ color: "white" }}>Left to right:  Craig Morris, Agustina Di Paola, Nathan Liddle, Anna Wilson </h3>
 
             </article>
 
             <br />
             <section style={{ color: "white" }} >
-                <div style={{ backgroundColor: "#984da2", borderRadius: "5px", padding: "5px", margin: "10px" }}>
+                <div style={{ backgroundColor: "#003b00", borderRadius: "5px", padding: "5px", margin: "10px" }}>
                     <h5 >Craig Morris</h5>
                 </div>
-                <div style={{ backgroundColor: "#984da2", borderRadius: "5px", padding: "5px", margin: "10px" }}>
+                <div style={{ backgroundColor: "#003b00", borderRadius: "5px", padding: "5px", margin: "10px" }}>
                     <del><h5 >Liliano Balde</h5>
                         <p>"I bring pure european excellence. If you want a property secured like CR7 secures the
                             Ballon d'or then you can trust me to make your dreams come true."</p></del>
                 </div>
-                <div style={{ backgroundColor: "#984da2", borderRadius: "5px", padding: "5px", margin: "10px" }}>
+                <div style={{ backgroundColor: "#003b00", borderRadius: "5px", padding: "5px", margin: "10px" }}>
                     <h5 >Agustina Di Paola</h5>
+                    <p>"I bring pure South American excellence. If you want a property secured like Messi secures the
+                            Wolrd Cup, then you can trust me to make your dreams come true."</p>
                 </div>
-                <div style={{ backgroundColor: "#984da2", borderRadius: "5px", padding: "5px", margin: "10px" }}>
+                <div style={{ backgroundColor: "#003b00", borderRadius: "5px", padding: "5px", margin: "10px" }}>
                     <del><h5>Paige Godwin</h5>
                         <p>"A good estate agent puts the 'pro' in 'property' and the 'fun' in 'funding'!"</p></del>
                 </div>
-                <div style={{ backgroundColor: "#984da2", borderRadius: "5px", padding: "5px", margin: "10px" }}>
+                <div style={{ backgroundColor: "#003b00", borderRadius: "5px", padding: "5px", margin: "10px" }}>
                     <del> <h5>Nathan Liddle</h5>
                         <p>"I’m a totally rad estate agent with 10 years of experience in
                             the industry. I’m like a superhero! So, if you’re looking
                             for an agent who’s as cool as a cucumber and as smooth as butter, look no further!"</p></del></div>
 
-                <div style={{ backgroundColor: "#984da2", borderRadius: "5px", padding: "5px", margin: "10px" }}>
+                <div style={{ backgroundColor: "#003b00", borderRadius: "5px", padding: "5px", margin: "10px" }}>
                     <h5>Nathan Liddle</h5>
                     <p>"I’m a totally rad estate agent with 10 years of experience in
                         the industry. I’m like a superhero! So, if you’re looking
                         for an agent who’s as cool as a cucumber and as smooth as butter, look no further!"</p>
                 </div>
-                <div style={{ backgroundColor: "#984da2", borderRadius: "5px", padding: "5px", margin: "10px" }}>
+                <div style={{ backgroundColor: "#003b00", borderRadius: "5px", padding: "5px", margin: "10px" }}>
                     <h5 >Anna Wilson</h5>
                     <p>"A house is a home filled with joy and beauty, making your dreams come true is my professional duty.</p>
                 <p>Put your trust, if you will, in my artistic finesse - the outcome, you'll find, is sure to impress."</p>
                 
                 </div>
         
-                <div style={{ backgroundColor: "#984da2", borderRadius: "5px", padding: "5px", margin: "10px" }}>
+                <div style={{ backgroundColor: "#003b00", borderRadius: "5px", padding: "5px", margin: "10px" }}>
                     <del><h5>Richard Miles</h5>
                         <p>"Bringing a touch of flair to the world of real estate at Control Alt Elite! As an
                             estate agent, I spin property magic, turning dreams into deeds. With a knack for
                             finding the perfect match and a knackier skill in negotiation, I'm the Sherlock Holmes
                             of homes. Let's embark on this adventure together and make your property dreams a reality!"</p></del>
                 </div>
-                <div style={{ backgroundColor: "#984da2", borderRadius: "5px", padding: "5px", margin: "10px" }}>
+                <div style={{ backgroundColor: "#003b00", borderRadius: "5px", padding: "5px", margin: "10px" }}>
                     <del><h5>Andrew King</h5>
                         <p>"The 'King' of the property world as named by some but in reality im just a truly humble man giving
                             families homes whilst raking in commission."</p></del>
