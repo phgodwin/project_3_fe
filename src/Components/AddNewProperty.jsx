@@ -30,10 +30,8 @@ function AddNewProperty() {
       seller: {id: sellerId}
     }
 
-
     axios.post("http://localhost:8081/properties/create", newProperty)
       .then(response => {
-
 
         setPrice("");
         setLocation("");
@@ -47,7 +45,6 @@ function AddNewProperty() {
       })
       .catch(error => console.error(error))
   }
-
 
   function getProperties() {
     axios.get("http://localhost:8081/properties/get")
@@ -64,10 +61,7 @@ function AddNewProperty() {
           <h3 style={{ fontFamily: "monospace" }}>Add a Property</h3>
           <form onSubmit={handleSubmit} className="row gx-3 gy-2" style={{ justifyContent: "center" }}>
             <div style={{ marginTop: "35px" }} class="col-auto">
-
-
             </div>
-
 
             <div class="col-auto">
               <label>Seller</label>
@@ -107,9 +101,7 @@ function AddNewProperty() {
       <div>
         <br />
         <FilterProperties properties={properties} />
-
       </div>
-
     </div>
 
   );

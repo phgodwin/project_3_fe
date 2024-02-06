@@ -1,14 +1,12 @@
-
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import { useNavigate, useParams } from "react-router-dom";
-// Edit properties axios - get and patch
+
 function EditProperties() {
 
     const navigate = useNavigate();
     const params = useParams();
 
-    // const [properties, setproperties] = useState([])
     const [price, setPrice] = useState ("");
     const [location, setLocation] = useState ("");
     const [postcode, setPostcode] = useState ("");
@@ -16,8 +14,6 @@ function EditProperties() {
     const [bathrooms, setBathrooms] = useState ("");
     const [garden, setGarden] = useState ("");
     const [propertyStatus, setPropertyStatus] = useState ("");
-
-    // function propertyInfo() {
 
     useEffect(() => {
     axios.get("http://localhost:8081/properties/get" + params.id)
@@ -37,7 +33,7 @@ function EditProperties() {
         e.preventDefault();
     
 
-    axios.patch("http://localhost:8081/properties/update" + params.id, { prc: price , loc: location, pcod: postcode, beds: bedrooms, bath: bathrooms, grdn: garden, status: propertyStatus})
+    axios.patch("http://localhost:8081/properties/update/" + params.id, { prc: price , loc: location, pcod: postcode, beds: bedrooms, bath: bathrooms, grdn: garden, status: propertyStatus})
         .then(() => {
             navigate("/properties")
 
@@ -77,7 +73,6 @@ return(
     <input className="form-control" onChange={event => setBathrooms(event.target.value)} type="number" id="bathrooms" name="bathrooms" value={bathrooms}/>
 
     <label for="autoSizingInput">Garden</label>
-    {/* <input className="form-control" type="text" name="garden" value={garden} onChange={(e) => setGarden(e.target.value)} required/> */}
     <select className="form-select" name="garden" onChange={(e) => setGarden(e.target.value)} value={garden} id="bathrooms">
         <option value="">Select an Option</option>
         <option value="Yes">Yes</option>
@@ -85,7 +80,7 @@ return(
     </select>
     <br />  
     <button className="form-control" type="submit" style={{ color: "white", fontWeight: "bold", backgroundColor: "#003b00" }}>Submit</button>
-                   
+               
     <br />
     
 </div>

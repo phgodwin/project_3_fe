@@ -7,7 +7,6 @@ import BuyerDropDown from '../BuyerDropDown';
 import Booking from '../Booking';
 import {useParams } from "react-router-dom";
 
-
 function Bookings() {
 
     const [bookings, setBookings] = useState ([]);
