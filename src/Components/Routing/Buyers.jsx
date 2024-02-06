@@ -77,7 +77,7 @@ function Buyers() {
 
         <div style={{ textAlign: "center", marginTop: "50px" }}>
             <br />
-            <h1 style={{ color: "#003b00", fontFamily: "monospace", textTransform: "capitalize", fontSize: "65px" }}>Buyers page</h1>
+            <h1 style={{ color: "white", fontFamily: "monospace", textTransform: "capitalize", fontSize: "65px" }}>Buyers page</h1>
             <div style={{ backgroundColor: "#003b00", borderRadius: "15px", color: "white", paddingBottom: "20px", width: "50%", margin: "auto" }} >
                 <h3 style={{ color: "white", fontFamily: "monospace" }}>Add a Buyer</h3>
                 <form onSubmit={handleSubmit} className="row gx-3 gy-2 align-items-center" style={{ justifyContent: "center", alignItems: "Center" }}>
