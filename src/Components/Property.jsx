@@ -5,9 +5,9 @@ import gardenPicture from "../images/garden-svgrepo-com.svg"
 import { useNavigate } from 'react-router-dom';
 import sellerPicture from "../images/person-svgrepo-com.svg";
 
-
+// us navigate?
 function Property(props) {
-
+debugger
     const handleEdit = () =>{
         navigate("/edit/" + props.id)
 
@@ -48,7 +48,7 @@ function Property(props) {
                             <li className='list-group-item'> <img alt='bed' width="30px" src={bedroomPicture}/> {props.beds}</li>
                             <li className='list-group-item'> <img alt='bath' width="30px" src={bathroomPicture}/> {props.bath}</li>
                             <li className='list-group-item'> <img alt='garden' width="30px" src={gardenPicture}/> {props.grdn}</li>
-                            <li className='list-group-item'> <img alt='garden' width="30px" src={sellerPicture}/> {props.sellnme}</li>
+                            <li className='list-group-item'> <img alt='garden' width="30px" src={sellerPicture}/> {props.sellerName}</li>
                         </ul>
                         <div class="card-body">
                         <h5>{props.status}</h5>     
@@ -69,7 +69,7 @@ Property.propTypes = {
     beds: PropTypes.string.isRequired,
     bath: PropTypes.string.isRequired,
     grdn: PropTypes.string.isRequired,
-    sellnme: PropTypes.string.isRequired
+    sellerName: PropTypes.string.isRequired
 }
 
 export default Property;

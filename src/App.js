@@ -15,7 +15,7 @@ function App() {
   return (
     <Router>
       <nav class="navbar navbar-expand-lg bg-body-tertiary">
-        <div class="container-fluid fixed-top " style={{ backgroundColor: "purple" }}>
+        <div class="container-fluid fixed-top " style={{ backgroundColor: "#003b00" }}>
         <Link to="/">
             <img src={Logo} alt='Logo Icon' className="navbar-brand" width="75px" />
           </Link>

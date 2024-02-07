@@ -1,4 +1,3 @@
-// EditProperty.jsx
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import { useNavigate, useParams } from "react-router-dom";
@@ -8,7 +7,6 @@ function EditProperties() {
     const navigate = useNavigate();
     const params = useParams();
 
-    // const [properties, setproperties] = useState([])
     const [price, setPrice] = useState ("");
     const [location, setLocation] = useState ("");
     const [postcode, setPostcode] = useState ("");
@@ -17,10 +15,8 @@ function EditProperties() {
     const [garden, setGarden] = useState ("");
     const [propertyStatus, setPropertyStatus] = useState ("");
 
-    // function propertyInfo() {
-
     useEffect(() => {
-    axios.get("http://localhost:3030/properties/" + params.id)
+    axios.get("http://localhost:8081/properties/get" + params.id)
     .then((res) => {
         console.log(res);
         setPrice(res.data.prc);
@@ -37,7 +33,7 @@ function EditProperties() {
         e.preventDefault();
     
 
-    axios.patch("http://localhost:3030/properties/" + params.id, { prc: price , loc: location, pcod: postcode, beds: bedrooms, bath: bathrooms, grdn: garden, status: propertyStatus})
+    axios.patch("http://localhost:8081/properties/update/" + params.id, { prc: price , loc: location, pcod: postcode, beds: bedrooms, bath: bathrooms, grdn: garden, status: propertyStatus})
         .then(() => {
             navigate("/properties")
 
@@ -48,9 +44,9 @@ function EditProperties() {
 return(
 
     <>
-    <h1 style={{ color: "purple", fontFamily: "monospace", textTransform: "capitalize", fontSize: "65px", marginTop: "50px", textAlign: "center" }}>Edit Property</h1>
+    <h1 style={{ color: "white", fontFamily: "monospace", textTransform: "capitalize", fontSize: "65px", marginTop: "50px", textAlign: "center" }}>Edit Property</h1>
 <form onSubmit={handleSubmit} className="row gx-3 gy-2" style={{ justifyContent: "center", marginTop: "20px"}}>
-<div className='row' style={{ backgroundColor: "purple", borderRadius: "15px", color: "white", padding: "30px", width: "50%", margin: "auto", justifyContent: "center" }}> 
+<div className='row' style={{ backgroundColor: "#003b00", borderRadius: "15px", color: "white", padding: "30px", width: "50%", margin: "auto", justifyContent: "center" }}> 
 <div class="col-auto">
     <label for="autoSizingInput">Price</label>
     <input className="form-control" onChange={event => setPrice(event.target.value)} type="text" id="price" value={price}/>
@@ -77,14 +73,14 @@ return(
     <input className="form-control" onChange={event => setBathrooms(event.target.value)} type="number" id="bathrooms" name="bathrooms" value={bathrooms}/>
 
     <label for="autoSizingInput">Garden</label>
-    {/* <input className="form-control" type="text" name="garden" value={garden} onChange={(e) => setGarden(e.target.value)} required/> */}
     <select className="form-select" name="garden" onChange={(e) => setGarden(e.target.value)} value={garden} id="bathrooms">
         <option value="">Select an Option</option>
         <option value="Yes">Yes</option>
         <option value="No">No</option>
     </select>
     <br />  
-    <button style={{ color: "white", fontWeight: "bold", backgroundColor: "#984da2", marginLeft:"30px",  width: "75%" }} className='form-control' type="" >Submit</button>
+    <button className="form-control" type="submit" style={{ color: "white", fontWeight: "bold", backgroundColor: "#003b00" }}>Submit</button>
+               
     <br />
     
 </div>

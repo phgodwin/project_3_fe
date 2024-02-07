@@ -1,8 +1,9 @@
 import axios from "axios";
 // installed axios (npm install axios) and then imported
 import { useEffect, useState } from "react";
-import Buyer from "../Buyer";
-
+import Buyer from "../Buyer"; 
+// CHILD USING PROPS
+// axios get and axios post for buyer
 
 function Buyers() {
 
@@ -17,7 +18,7 @@ function Buyers() {
 
     function getBuyers() {
         axios
-            .get("http://localhost:3030/buyers")
+            .get("http://localhost:8081/buyers/get")
             .then((response) => {
                 setBuyers(response.data)
             })
@@ -33,6 +34,8 @@ function Buyers() {
                 postCode={buyer.postCode}
                 phoneNum={buyer.phoneNum}
                 emailAdd={buyer.emailAdd}
+                id={buyer.id}
+                getBuyers={getBuyers}
             />)
     }
 
@@ -52,7 +55,7 @@ function Buyers() {
 
 
 
-        axios.post("http://localhost:3030/buyers", { firstName, lastName, postCode, phoneNum, emailAdd })
+        axios.post("http://localhost:8081/buyers/create", { firstName, lastName, postCode, phoneNum, emailAdd })
 
 
             .then(response => {
@@ -74,8 +77,8 @@ function Buyers() {
 
         <div style={{ textAlign: "center", marginTop: "50px" }}>
             <br />
-            <h1 style={{ color: "purple", fontFamily: "monospace", textTransform: "capitalize", fontSize: "65px" }}>Buyers page</h1>
-            <div style={{ backgroundColor: "purple", borderRadius: "15px", color: "white", paddingBottom: "20px", width: "50%", margin: "auto" }} >
+            <h1 style={{ color: "white", fontFamily: "monospace", textTransform: "capitalize", fontSize: "65px" }}>Buyers page</h1>
+            <div style={{ backgroundColor: "#003b00", borderRadius: "15px", color: "white", paddingBottom: "20px", width: "50%", margin: "auto" }} >
                 <h3 style={{ color: "white", fontFamily: "monospace" }}>Add a Buyer</h3>
                 <form onSubmit={handleSubmit} className="row gx-3 gy-2 align-items-center" style={{ justifyContent: "center", alignItems: "Center" }}>
 
@@ -98,7 +101,7 @@ function Buyers() {
                         <input className="form-control" value={emailAdd} onChange={event => setEmailAdd(event.target.value)} placeholder="Email Address" type="email" required></input>
 
                         <br />
-                        <button variant='primary' className="form-control" type="submit" color="primary" style={{ color: "white", fontWeight: "bold", backgroundColor: "#984da2" }}>Submit</button>
+                        <button variant='primary' className="form-control" type="submit" color="primary" style={{ color: "white", fontWeight: "bold", backgroundColor: "#003b00" }}>Submit</button>
                     </div>
                 </form>
 
@@ -109,7 +112,7 @@ function Buyers() {
             <br />
             <br />
 
-            <table className="table table-bordered, " style={{ color: 'white', backgroundColor: 'purple', textAlign: "center", marginSide: "15%" }}>
+            <table className="table table-bordered, " style={{ color: 'white', backgroundColor: '#003b00', textAlign: "center", marginSide: "15%" }}>
                 <thead className="table-dark" id="table-color">
                     <tr>
                         <th>First Name</th>

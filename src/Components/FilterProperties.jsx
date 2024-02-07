@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import Property from "./Property";
 import axios from "axios";
-
+// no axios on this page - are we moving filtering logic to Spring?
 function FilterProperties(props) {
   const [locationFilter, setLocationFilter] = useState("");
   const [priceFilter, setPriceFilter] = useState("");
@@ -10,7 +10,7 @@ function FilterProperties(props) {
   const [gardenFilter, setGardenFilter] = useState("");
   const [propertyStatus, setPropertyStatusFilter] = useState("");
 
-  // to commit
+  
 
   const propertyComponents = [];
 
@@ -42,7 +42,7 @@ function FilterProperties(props) {
         grdn={property.grdn}
         id={property.id}
         status={property.status}
-        sellnme={property.sellnme}
+        sellerName={property.sellerName}
       />
     );
   }
@@ -82,7 +82,7 @@ function FilterProperties(props) {
 
   return (
     <div className="container text-center">
-      <div className="row" style={{ backgroundColor: "purple", borderRadius: "15px", color: "white", padding: "30px", width: "75%", margin: "auto" }}>
+      <div className="row" style={{ backgroundColor: "#003b00", borderRadius: "15px", color: "white", padding: "30px", width: "75%", margin: "auto" }}>
       <h2 style={{ fontFamily: "monospace" }}>Filter Properties</h2>
         <div className="col">
           <label htmlFor="exampleFormControlInput1" className="form-label">

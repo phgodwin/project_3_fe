@@ -1,14 +1,14 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
 
-
+// axios get - DISPLAYlist of sellers - where- properties page- select seller of property- used in AddNewProperty
 function SellerDropDown(props) {
 
     const [sellers, setSellers] = useState([])
     const sellerNameComponent = []
     function getSellers() {
         axios
-            .get("http://localhost:3030/sellers")
+            .get("http://localhost:8081/sellers/get")
             .then((response) => {
                 setSellers(response.data)
             })
@@ -20,7 +20,7 @@ function SellerDropDown(props) {
     for (let seller of sellers) {
 
         sellerNameComponent.push(
-            <option value={seller.firstName + " " + seller.lastName}>{seller.firstName + " " + seller.lastName}</option>)
+            <option value={seller.id}>{seller.firstName + " " + seller.lastName}</option>)
 
     }
     return(
