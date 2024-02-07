@@ -40,6 +40,7 @@ function Home() {
             <section style={{ color: "white" }} >
                 <div style={{ backgroundColor: "#003b00", borderRadius: "5px", padding: "5px", margin: "10px" }}>
                     <h5 >Craig Morris</h5>
+                    <p>"I LIKE TO MOVE YOU MOVE YOU, I LIKE TO MOVE YOU MOVE YOU, I LIKE TO MOVE YOU MOVE YOU, I LIKE TO..... MOVE YOU"</p>
                 </div>
                 <div style={{ backgroundColor: "#003b00", borderRadius: "5px", padding: "5px", margin: "10px" }}>
                     <del><h5 >Liliano Balde</h5>
