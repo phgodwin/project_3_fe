@@ -5,21 +5,23 @@ import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import BuyerDropDown from '../BuyerDropDown';
 import Booking from '../Booking';
+import {useParams } from "react-router-dom";
 
 function Bookings() {
 
     const [bookings, setBookings] = useState ([]);
     const [date, setDate] = useState ("");
     const [time, setTime] = useState ("");
-    const [buyername, setBuyerName] = useState ("");
+    const [buyerName, setBuyerName] = useState ("");
+    const params = useParams();
     const bookingComponent = []
 
 
     function getBookings() {
         axios
-            .get("http://localhost:8081/bookings/get" )
+            .get("http://localhost:8081/properties/get/"  + params.id )
             .then((response) => {
-                setBookings(response.data)
+                setBookings(response.data.bookings)
             })
             .catch(error => console.error(error))
     }
@@ -27,11 +29,12 @@ function Bookings() {
 
     
     for (let booking of bookings) {
+        
         bookingComponent.push(
             <Booking
                 time={booking.time}
                 date={booking.date}
-                buyername={booking.buyername}
+                buyerName={booking.buyerName}
                 id={booking.id}
                 getBookings={getBookings}
             />)
@@ -50,7 +53,9 @@ function Bookings() {
             }
         }
 
-        axios.post("http://localhost:8081/bookings/create", { date, time, buyername  })
+        axios.post("http://localhost:8081/bookings/create", { date, time, buyer:{id:buyerName}, property: {id:params.id}}
+        
+        )
         .then(response => {
             setDate("");
             setTime("");   
@@ -62,7 +67,7 @@ function Bookings() {
     } 
     return(
         <>
-<div style={{ backgroundColor: "purple", borderRadius: "15px", color: "white", paddingBottom: "20px", width: "50%", margin: "auto" }} ></div>
+<div style={{ backgroundColor: "#003b00", borderRadius: "15px", color: "white", paddingBottom: "20px", width: "50%", margin: "auto" }} ></div>
         <form onSubmit={handleSubmit} style={{marginTop: "50px", width: "20%", marginLeft: "20px"}} >
             <input onChange={(e) => setDate (e.target.value)} value={date} type="date" name="bookings" id="bookings" className="form-control"/>
             <br />
@@ -80,10 +85,10 @@ function Bookings() {
             </select>
         
             <br />
-            <BuyerDropDown value={buyername} onChange={(e) => setBuyerName (e.target.value)} className="form-control"/>
+            <BuyerDropDown value={buyerName} onChange={(e) => setBuyerName (e.target.value)} className="form-control"/>
             <br />
             <br />
-            <button style={{ color: "white", fontWeight: "bold", backgroundColor: "#984da2" }} type='submit'>Submit</button>
+            <button style={{ color: "white", fontWeight: "bold", backgroundColor: "#003b00" }} type='submit'>Submit</button>
         </form >
         <div/>
         <br />

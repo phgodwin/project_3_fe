@@ -20,7 +20,7 @@ function BuyerDropDown(props) {
     for (let buyer of buyers) {
 
         buyerNameComponent.push(
-            <option value={buyer.firstName + " " + buyer.lastName}>{buyer.firstName + " " + buyer.lastName}</option>)
+            <option value={buyer.id}>{buyer.firstName + " " + buyer.lastName}</option>)
 
     }
     return(

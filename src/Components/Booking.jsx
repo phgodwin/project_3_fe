@@ -7,10 +7,10 @@ function Booking(props) {
     return (
         
         <tr>
-            <td>{props.buyername}</td>
+            <td>{props.buyerName}</td>
             <td>{props.date}</td>
             <td>{props.time}</td>
-            <td><button style={{ color: "white", fontWeight: "bold", backgroundColor: "#984da2" }} type="button" onClick={() => {
+            <td><button style={{ color: "white", fontWeight: "bold", backgroundColor: "#003b00" }} type="button" onClick={() => {
                         axios.delete("http://localhost:8081/bookings/delete/" + props.id)
                             .then(res => { props.getBookings() })
                             
@@ -23,7 +23,7 @@ function Booking(props) {
 Booking.propTypes = {
     time: PropTypes.string,
     date: PropTypes.string,
-    buyername: PropTypes.string,
+    buyerName: PropTypes.string,
     id: PropTypes.number,
 }
 

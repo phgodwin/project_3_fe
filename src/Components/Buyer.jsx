@@ -1,5 +1,8 @@
 import PropTypes from 'prop-types';
+import axios from 'axios';
+import Buyers from './Routing/Buyers';
 // BUYER PROPS
+
 function Buyer(props) {
    
     return (
@@ -10,7 +13,23 @@ function Buyer(props) {
             <td>{props.postCode}</td>
             <td>{props.phoneNum}</td>
             <td>{props.emailAdd}</td>
-        </tr>
+            <td><button style={{ color: "white", fontWeight: "bold", backgroundColor: "#003b00" }} type="button" onClick={() => {
+                axios.delete("http://localhost:8081/buyers/delete/" + props.id)
+                .then(res => {props.getBuyers()})
+                .catch(err => console.error(err));
+             }}> DELETE BUYER </button>
+             </td>
+
+             {/* to be fix */}
+             <td><button style={{ color: "white", fontWeight: "bold", backgroundColor: "#003b00" }} type="button" onClick={() => {
+                axios.patch("http://localhost:8081/buyers/update/" + props.id)
+                .then(res => {props.getBuyers()})
+                .catch(err => console.error(err));
+             }}> EDIT BUYER </button>
+             </td>
+                </tr>
+                
+
     );
 }
 
@@ -21,6 +40,8 @@ Buyer.propTypes = {
     postCode: PropTypes.string,
     phoneNum: PropTypes.string,
     emailAdd: PropTypes.string,
+    id: PropTypes.number,
 }
 
 export default Buyer;
+
