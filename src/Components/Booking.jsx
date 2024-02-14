@@ -11,7 +11,7 @@ function Booking(props) {
             <td>{props.date}</td>
             <td>{props.time}</td>
             <td><button style={{ color: "white", fontWeight: "bold", backgroundColor: "#003b00" }} type="button" onClick={() => {
-                        axios.delete("http://localhost:8081/bookings/delete/" + props.id)
+                        axios.delete("/bookings/delete/" + props.id)
                             .then(res => { props.getBookings() })
                             
                             .catch(err => console.error(err));

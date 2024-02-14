@@ -12,7 +12,7 @@ function HomeTotals() {
 
     function getBuyers() {
         axios
-            .get("http://localhost:8081/buyers/get")
+            .get("/buyers/get")
             .then((response) => {
                 setBuyers(response.data)
             })
@@ -21,7 +21,7 @@ function HomeTotals() {
 
     function getSellers() {
         axios
-            .get("http://localhost:8081/sellers/get")
+            .get("/sellers/get")
             .then((response) => {
                 setSellers(response.data)
             })
@@ -31,7 +31,7 @@ function HomeTotals() {
 
     function getProperties() {
         axios
-            .get("http://localhost:8081/properties/get")
+            .get("/properties/get")
             .then((response) => {
                 setProperties(response.data)
             })
@@ -41,7 +41,7 @@ function HomeTotals() {
 
     function getBookings() {
         axios
-            .get("http://localhost:8081/bookings/get")
+            .get("/bookings/get")
             .then((response) => {
                 setBookings(response.data)
             })

@@ -19,7 +19,7 @@ function Bookings() {
 
     function getBookings() {
         axios
-            .get("http://localhost:8081/properties/get/"  + params.id )
+            .get("/properties/get/"  + params.id )
             .then((response) => {
                 setBookings(response.data.bookings)
             })
@@ -53,7 +53,7 @@ function Bookings() {
             }
         }
 
-        axios.post("http://localhost:8081/bookings/create", { date, time, buyer:{id:buyerName}, property: {id:params.id}}
+        axios.post("/bookings/create", { date, time, buyer:{id:buyerName}, property: {id:params.id}}
         
         )
         .then(response => {

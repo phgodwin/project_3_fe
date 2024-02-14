@@ -13,7 +13,7 @@ const AddProperty = () => {
 
 
     function getProperties() {
-        axios.get("http://localhost:8081/properties/get")
+        axios.get("/properties/get")
             .then((response) => { setNewlyCreated(response.data) })
             .catch(error => console.error(error))
     }
@@ -45,7 +45,7 @@ const AddProperty = () => {
             grdn: garden,
         }
 
-        axios.post("http://localhost:8081/properties/create", newProperty)
+        axios.post("/properties/create", newProperty)
 
             .then((response) => {
                 const newData = newlyCreated

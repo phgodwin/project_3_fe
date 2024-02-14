@@ -18,7 +18,7 @@ function Buyers() {
 
     function getBuyers() {
         axios
-            .get("http://localhost:8081/buyers/get")
+            .get("/buyers/get")
             .then((response) => {
                 setBuyers(response.data)
             })
@@ -55,7 +55,7 @@ function Buyers() {
 
 
 
-        axios.post("http://localhost:8081/buyers/create", { firstName, lastName, postCode, phoneNum, emailAdd })
+        axios.post("/buyers/create", { firstName, lastName, postCode, phoneNum, emailAdd })
 
 
             .then(response => {

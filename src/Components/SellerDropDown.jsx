@@ -8,7 +8,7 @@ function SellerDropDown(props) {
     const sellerNameComponent = []
     function getSellers() {
         axios
-            .get("http://localhost:8081/sellers/get")
+            .get("/sellers/get")
             .then((response) => {
                 setSellers(response.data)
             })

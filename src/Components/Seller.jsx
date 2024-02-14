@@ -12,14 +12,14 @@ function Seller(props) {
             <td>{props.phoneNum}</td>
             <td>{props.emailAdd}</td>
             <td><button style={{ color: "white", fontWeight: "bold", backgroundColor: "#003b00" }} type="button" onClick={() => {
-                axios.delete("http://localhost:8081/sellers/delete/" + props.id)
+                axios.delete("/sellers/delete/" + props.id)
                 .then(res => {props.getSellers()})
                 .catch(err => console.error(err));
              }}> DELETE SELLER </button>
              </td>
                   {/* to be fix */}
                   <td><button style={{ color: "white", fontWeight: "bold", backgroundColor: "#003b00" }} type="button" onClick={() => {
-                axios.patch("http://localhost:8081/sellers/update/" + props.id)
+                axios.patch("/sellers/update/" + props.id)
                 .then(res => {props.getSellers()})
                 .catch(err => console.error(err));
              }}> EDIT SELLER </button>

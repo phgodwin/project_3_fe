@@ -16,7 +16,7 @@ function EditProperties() {
     const [propertyStatus, setPropertyStatus] = useState ("");
 
     useEffect(() => {
-    axios.get("http://localhost:8081/properties/get" + params.id)
+    axios.get("/properties/get" + params.id)
     .then((res) => {
         console.log(res);
         setPrice(res.data.prc);
@@ -33,7 +33,7 @@ function EditProperties() {
         e.preventDefault();
     
 
-    axios.patch("http://localhost:8081/properties/update/" + params.id, { prc: price , loc: location, pcod: postcode, beds: bedrooms, bath: bathrooms, grdn: garden, status: propertyStatus})
+    axios.patch("/properties/update/" + params.id, { prc: price , loc: location, pcod: postcode, beds: bedrooms, bath: bathrooms, grdn: garden, status: propertyStatus})
         .then(() => {
             navigate("/properties")
 

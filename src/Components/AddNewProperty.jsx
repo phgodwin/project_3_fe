@@ -30,7 +30,7 @@ function AddNewProperty() {
       seller: {id: sellerId}
     }
 
-    axios.post("http://localhost:8081/properties/create", newProperty)
+    axios.post("/properties/create", newProperty)
       .then(response => {
 
         setPrice("");
@@ -47,7 +47,7 @@ function AddNewProperty() {
   }
 
   function getProperties() {
-    axios.get("http://localhost:8081/properties/get")
+    axios.get("/properties/get")
       .then((response) => { setProperties(response.data) })
 
   }
